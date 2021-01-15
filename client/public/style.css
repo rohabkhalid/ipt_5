@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: white;
+  height: 100%;
+  position: relative;
+}
+
+.header {
+  background-color: #eb4034;
+}
+.header h1 {
+  text-align: center;
+  padding: 15px;
+  font-family: "Fondamento", cursive;
+  font-size: 3em;
+  color: white;
+}
+
+.header button {
+  position: absolute;
+  right: 0;
+  margin-right: 50px;
+  top: 34px;
+  background: none;
+  border: 1px solid white;
+  outline: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.footer {
+  background-color: #eb4034;
+  text-align: center;
+  color: white;
+  padding: 25px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.dashboard,
+.credentials {
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.main-hr {
+  border-width: 0;
+  height: 1px;
+  color: #eb4034;
+  background-color: #eb4034;
+  width: 25%;
+  margin: auto;
+  margin-top: 25px;
+}
+.login-container h3,
+.reg-container h3 {
+  text-align: center;
+  padding: 15px 0 0 0;
+  font-family: "Grenze Gotisch", cursive;
+  font-size: 1.5em;
+  color: #eb4034;
+}
+
+.login-form input,
+.reg-form input {
+  display: block;
+  background-color: tomato;
+  border: none;
+  outline: none;
+  padding: 15px 15px;
+  margin: 10px auto;
+  width: 33%;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Change the white to any color ;) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px tomato inset !important;
+  box-shadow: 0 0 0 30px tomato inset !important;
+}
+
+/*Change text in autofill textbox*/
+input:-webkit-autofill {
+  -webkit-text-fill-color: white !important;
+}
+
+.login-form input::placeholder,
+.reg-form input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #e4e3e3;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #e4e3e3;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #e4e3e3;
+}
+
+.login-form button,
+.reg-form button {
+  display: block;
+  text-align: center;
+  border: none;
+  outline: none;
+  background-color: #eb4034;
+  color: white;
+  font-family: "Grenze Gotisch", cursive;
+  padding: 5px 15px;
+  width: 100px;
+  border-radius: 25px;
+  margin: auto;
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.new-task {
+  width: 100%;
+  text-align: center;
+  padding: 25px;
+}
+
+.new-task input {
+  border: none;
+  outline: none;
+  background-color: tomato;
+  padding: 12px 25px;
+  margin: 10px;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  width: 30%;
+}
+
+.new-task input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+}
+
+.new-task button {
+  border: none;
+  outline: none;
+  background-color: #eb4034;
+  color: white;
+  font-family: "Grenze Gotisch", cursive;
+  padding: 5px 25px;
+  width: 80px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.task-list h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: "Grenze Gotisch", cursive;
+  color: #eb4034;
+  margin-top: -5px;
+  font-size: 2em;
+}
+
+.task {
+  background-color: tomato;
+  padding: 10px 25px;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task p {
+  display: inline-block;
+  width: 95%;
+  color: white;
+  font-family: "Grenze Gotisch", cursive;
+}
+
+.task input {
+  display: inline-block;
+  align-items: right;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+}
+
+.task input:hover {
+  background-color: tomato;
+}
+
+@media (max-width: 900px) {
+  .login-form input,
+  .reg-form input {
+    width: 60%;
+  }
+
+  .new-task input {
+    width: 50%;
+  }
+
+  .header button {
+    margin-right: 30px;
+  }
+  .task p {
+    width: 90%;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .header h1{
+    font-size: 2em;
+  }
+
+  .header button {
+    margin-right: 18px;
+    padding: 3px 7px;
+    font-size: 10px;
+    top: 28px;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .header h1{
+    font-size: 1.5em;
+  }
+
+  .header button {
+    margin-right: 15px;
+    padding: 4px 5px;
+    font-size: 10px;
+    top: 20px;
+  }
+}
+
